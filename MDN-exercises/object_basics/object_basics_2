@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+    const today = new Date();
+    const currentYear = today.getFullYear();
+
+    const favBand = {
+        name: "Sticky Fingers",
+        nationality: "Australian",
+        genre: "Reggae Rock/Psychedelic",
+        members: 4,
+        formed: 2008,
+        split: false,
+        albums: [
+           {name: "Caress Your Soul", released: 2013 },
+           {name: "Land of Pleasure", released: 2014 },
+           {name: "Westway", released: 2016 },
+           {name: "Yours to Keep",  released: 2019},
+           {name: "Lekkerboy",  released: 2022},
+        ],
+    }
+
+    bandInfo  = `${favBand.name} are an ${favBand.nationality} band who have been active for ${currentYear - favBand.formed} years. Their play style can be described as ${favBand.genre} and their first album is called ${favBand.albums[0].name} and was released in ${favBand.albums[0].released}`;
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
