@@ -31,7 +31,7 @@
       breed : 'Cymric',
       color : 'white',
       greeting: function() {
-        console.log(`Hello, said ${cat.name} the ${cat.breed}.`);
+        console.log(`Hello, said ${this.name} the ${this.breed}.`);
       }
     }
     const cat2 = {
@@ -39,10 +39,12 @@
       breed : 'British short hair',
       color : 'grey',
       greeting: function() {
-        console.log(`Hello, said ${cat.name} the ${cat.breed}.`);
+        console.log(`Hello, said ${this.name} the ${this.breed}.`);
       }
     }
 
+    cat.greeting();
+    cat2.greeting();
 
   </script>
 
