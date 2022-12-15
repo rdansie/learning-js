@@ -43,6 +43,13 @@
     // Add your code here
 
 
+
+    for(let i = 0; i < phonebook.length; i++ ) {
+      if (phonebook[i].name === name) {  
+        para.innerHTML = `Name = ${phonebook[i].name} <br> Number = ${phonebook[i].number}`;
+        continue;
+      }
+    }
     
 
     // Don't edit the code below here!
